@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.domain.entity
 
 data class User(
     val id: Int,
