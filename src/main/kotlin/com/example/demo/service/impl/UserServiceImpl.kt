@@ -7,10 +7,13 @@ import org.springframework.stereotype.Service
 
 @Service
 class UserServiceImpl(
-    val userRepository: UserRepository
+    private val userRepository: UserRepository
 ) : UserService {
-
     override fun findAllUsers(): List<User> {
         return userRepository.findAllUsers()
+    }
+
+    override fun createUser(id: Int, login: String, name: String): User {
+        return userRepository.createUser(id, login, name)
     }
 }

@@ -1,10 +1,9 @@
 package com.example.demo
 
-import org.mybatis.spring.annotation.MapperScan
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-@MapperScan("com.example.demo.mapper") // Specify where we should place mapper interfaces
+// By default Spring Boot will seek under this package for MyBatis mapper interfaces
 @SpringBootApplication
 class DemoApplication
 

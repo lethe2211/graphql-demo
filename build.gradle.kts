@@ -26,8 +26,12 @@ dependencies {
 
 	// h2 Database
 	runtime("com.h2database:h2")
+
+	// Kotlin
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

@@ -7,3 +7,7 @@ type User {
 type Query {
     users: [User]
 }
+
+type Mutation {
+    writeUser(id: ID!, login: String!, name: String!): User!
+}

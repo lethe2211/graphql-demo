@@ -7,9 +7,19 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class UserRepositoryImpl(
-    val userMapper: UserMapper
+    private val userMapper: UserMapper
 ) : UserRepository {
     override fun findAllUsers(): List<User> {
         return userMapper.findAll()
+    }
+
+    override fun createUser(id: Int, login: String, name: String): User {
+        val user = User(
+            id = id,
+            login = login,
+            name = name
+        )
+        userMapper.createUser(user)
+        return user
     }
 }
