@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Options
 import org.apache.ibatis.annotations.Select
 
-@Mapper
+@Mapper // Marker to register it as MyBatis Mapper
 interface UserMapper {
 
     @Select("SELECT * FROM users")

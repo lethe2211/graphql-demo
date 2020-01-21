@@ -1,13 +1,30 @@
+# GraphQL schema definition file
 type User {
     login: String!,
     id: ID!,
     name: String
 }
 
+# Example query:
+# query {
+#     users {
+#         login
+#         name
+#         id
+#     }
+# }
 type Query {
     users: [User]
 }
 
+# Example query:
+# mutation writeUser {
+#   writeUser(id: "3", login: "hoge", name: "fuga") {
+#     id
+#     login
+#     name
+#   }
+# }
 type Mutation {
     writeUser(id: ID!, login: String!, name: String!): User!
 }
